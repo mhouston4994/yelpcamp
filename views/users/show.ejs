@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+<div class="row">
+    <div class="col-md-4">
+        <h1><%= user.firstName + " " + user.lastName %></h1>
+        <div class="card no-border">
+            <img class="img-responsive img-fluid index-sites" id="avatar" src=
+            "
+            <% if(user && !user.avatar){ %>
+            /images/default_avatar.jpg
+            <% } else { %>
+            <%= user.avatar %>
+            <% } %>
+            " alt="User Profile Image">
+            <div class="caption"><a href="mailto:<%= user.email %>"><%= user.email %></a></div>
+        </div>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+         incididunt ut labore et dolore magna aliqua. Leo a diam sollicitudin tempor id 
+         eu nisl nunc. Neque volutpat ac tincidunt vitae. In aliquam sem fringilla ut 
+         morbi. Curabitur vitae nunc sed velit. Suspendisse interdum consectetur libero 
+         id faucibus. At augue eget arcu dictum varius duis. Mattis pellentesque id nibh 
+         tortor id aliquet lectus proin. Libero enim sed faucibus turpis in eu mi bibendum 
+         neque. Libero enim sed faucibus turpis in eu mi.
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <ul>
+                <h3><%= user.username %>'s Campgrounds</h3>
+                <% campgrounds.forEach(function(campground){ %>
+                    <a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a>
+                    <div class="card"><a href="/campgrounds/<%= campground.id %>"><img class="img-responsive img-fluid index-sites" src="<%= campground.image %>"></a></div>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+ </div>
+
+<% include ../partials/footer %>

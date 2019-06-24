@@ -1,0 +1,46 @@
+<% include partials/header.ejs %>
+
+<div class="row">
+    <h1 style="text-align: center">Sign Up</h1>
+    <div style="width: 40%; margin: 25px auto;">
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="username" class="form-weight-bold">Username:</label>
+                <input class="form-control" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-weight-bold">Password:</label>
+                <input class="form-control" type="password" name="password" placeholder="Password" required title="Password Must Be Between 5-10 Characters Long" pattern=".{5,10}">
+            </div> 
+            <div class="form-group">
+                <label for="confirmPassword" class="form-weight-bold">Confirm Password:</label>
+                <input class="form-control" type="password" name="confirmPassword" placeholder="Confirm Password" required title="Password Must Be Between 5-10 Characters Long" pattern=".{5,10}">
+            </div> 
+            <div class="form-group">
+                <label for="firstName" class="form-weight-bold">First Name:</label>
+                <input class="form-control" type="text" name="firstName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="form-weight-bold">Last Name:</label>
+                <input class="form-control" type="text" name="lastName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-weight-bold">Email Address:</label>
+                <input class="form-control" type="text" name="email" placeholder="john@doe.com">
+            </div>      <div class="form-group">
+                <label for="avatar" class="form-weight-bold">Avatar:</label>
+                <input class="form-control" type="text" name="avatar" placeholder="www.site.com/avatar.jpg">
+            </div>
+            <div class="form-group">
+                <label for="adminCode" class="form-weight-bold">Admin Code:</label>
+                <input class="form-control" type="text" name="adminCode" placeholder="Admin Code">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+            </div>
+        </form>
+        <a href="/campgrounds">Go Back</a>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>

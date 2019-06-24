@@ -1,0 +1,20 @@
+<% include partials/header.ejs %>
+
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-signin" action="/login" method="POST">
+            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                <input class="form-control lowercase" type="text" name="username" placeholder="username" required autofocus>
+                <input class="form-control" type="password" name="password" placeholder="password" required>
+            <div class="form-signin">
+                <button class="btn btn-lg btn-primary btn-block">Login</button>
+                <a class="caption" href="/forgot">Forgot Password</a>
+            </div>
+            <div class="form-signin">
+                <a href="/campgrounds">Go Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>
